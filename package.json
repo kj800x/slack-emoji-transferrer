@@ -1,0 +1,17 @@
+{
+  "name": "@kj800x/slack-emoji-transferrer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Johnson <kevin@kj800x.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
