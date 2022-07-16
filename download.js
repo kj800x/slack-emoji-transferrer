@@ -9,7 +9,8 @@ const arg = (name) => {
 
 const EMOJI_FILE = arg("emojis") || "emojis.json";
 
-const emojis = require(EMOJI_FILE).emoji;
+const path = require("path");
+const emojis = require(path.resolve(EMOJI_FILE)).emoji;
 const fetch = require("node-fetch");
 const util = require("util");
 const mkdirp = require("mkdirp");
