@@ -35,6 +35,7 @@ async function requestAdminList() {
     method: "POST",
     uri: `https://${SLACK}.slack.com/api/emoji.adminList?_x_id=1.0.${Math.random()}`,
     json: true,
+    timeout: 2 * 60 * 1000,
     headers: {
       cookie: AUTH.COOKIES,
       origin: `https://${SLACK}.slack.com`,
@@ -47,7 +48,7 @@ async function requestAdminList() {
       user_ids: [],
       token: AUTH.TOKEN,
     },
-  }).catch((err) => Promise.resolve(err.error));
+  }).catch((err) => Promise.resolve(err.error || err));
   return res;
 }
 
